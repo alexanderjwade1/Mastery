@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!241 &24100000
+AudioMixerController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Water_Scene_Mixer
+  m_OutputGroup: {fileID: 0}
+  m_MasterGroup: {fileID: 24300001}
+  m_Snapshots:
+  - {fileID: 24500003}
+  - {fileID: 24546844}
+  - {fileID: 24545362}
+  - {fileID: 24546830}
+  m_StartSnapshot: {fileID: 24500003}
+  m_SuspendThreshold: -80
+  m_EnableSuspend: 1
+  m_ExposedParameters: []
+  m_AudioMixerGroupViews:
+  - guids:
+    - ba781d4edc02642a2b8d4cbeb1fbd688
+    - b8bf9b2e97a564f64b99768ee8eb37d9
+    name: View
+  m_CurrentViewIndex: 0
+  m_TargetSnapshot: {fileID: 24545362}
+--- !u!243 &24300001
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Master
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: ba781d4edc02642a2b8d4cbeb1fbd688
+  m_Children:
+  - {fileID: 24341026}
+  m_Volume: b38cd129d07d94a80a427ab0e8320620
+  m_Pitch: a32547ecc8e2641228f62cfa9d4d8cb2
+  m_Effects:
+  - {fileID: 24400002}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!243 &24341026
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Water
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: b8bf9b2e97a564f64b99768ee8eb37d9
+  m_Children: []
+  m_Volume: e160b510188224d9a9d7ded1b0ec2152
+  m_Pitch: 696df94e34f894d00823c07f741a66f1
+  m_Effects:
+  - {fileID: 24468632}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!244 &24400002
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: 0d9bc738e8b5f4414badc90260fda755
+  m_EffectName: Attenuation
+  m_MixLevel: 1b31428d9fe1046f8a07b0c31b671102
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &24468632
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: 30ab2dac1995c4ce0972b426a527c505
+  m_EffectName: Attenuation
+  m_MixLevel: 0b16d69992cfb4a47a05a163829792b7
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!245 &24500003
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Snapshot
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: fff9b030730b0449598926df78afbcaf
+  m_FloatValues:
+    e160b510188224d9a9d7ded1b0ec2152: -80
+  m_TransitionOverrides: {}
+--- !u!245 &24545362
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Water_Now
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: 42bcfbc93ba8646b9950e284112b4e06
+  m_FloatValues:
+    e160b510188224d9a9d7ded1b0ec2152: 0
+  m_TransitionOverrides: {}
+--- !u!245 &24546830
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Game_End
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: beea64d344abf4a73961956dfb97e4aa
+  m_FloatValues:
+    e160b510188224d9a9d7ded1b0ec2152: -27.943817
+  m_TransitionOverrides: {}
+--- !u!245 &24546844
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: SelectScreen
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: 50367097586844bdbaa706b02c87236d
+  m_FloatValues:
+    e160b510188224d9a9d7ded1b0ec2152: -80
+  m_TransitionOverrides: {}
