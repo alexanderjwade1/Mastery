@@ -42,9 +42,12 @@ public class GM : MonoBehaviour {
 	public GameObject frame_3;
 	public GameObject frame_4;
 
+	private GameObject selectedFrame;
+
 	public GameObject portal;
 	public GameObject cubes;
-	public GameObject guage;
+	//public GameObject guage;
+	public GameObject gauge2;
 	public GameObject wind;
 
 	// game phase
@@ -263,6 +266,8 @@ public class GM : MonoBehaviour {
 			frame_4.SetActive(false);
 		}
 
+		selectedFrame = frame;
+
 		// disable select cue text
 		Select_Cue_Text.text = "How ANGRY does the cue  \n make your character feel?";
 
@@ -270,7 +275,9 @@ public class GM : MonoBehaviour {
 		frame.gameObject.transform.position = new Vector3 (0f, -1f, 0f);
 
 		// guage
-		guage.gameObject.SetActive (true);
+		//guage.gameObject.SetActive(true);
+		//gauge
+		gauge2.gameObject.SetActive(true);
 
 		// increment curr game phase
 		curr_game_phase = game_phase.FEELINGS;
@@ -281,13 +288,16 @@ public class GM : MonoBehaviour {
 			Select_Cue_Text.text = "How FEARFUL does the cue \n make your character feel?";
 		} else {
 			curr_game_phase = game_phase.FEELINGS;
+			// move selected cue to better position
+			selectedFrame.gameObject.transform.position = new Vector3 (0.25f, 1.22f, 0f);
 			StartCoroutine(FinishFeelings(0.1F));
 		}
 	}
 
 	IEnumerator FinishFeelings(float waitTime) {
 		Select_Cue_Grouper.SetActive(false);
-		guage.gameObject.SetActive(false);
+		//guage.gameObject.SetActive(false);
+		gauge2.gameObject.SetActive(false);
 		if (first_time) {
 			//Debug.Log ("first");
 			ModalPanel modalPanel = ModalPanel.Instance ();
